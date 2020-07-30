@@ -9,8 +9,10 @@
 - Clone QFlux Module in Qt Project Folder
 
 ```
-cd <to-qt-project-folder>
+cd <qt-project-folder>
 git clone https://github.com/dopplix/QFlux.git qflux
+cd qflux
+git clone https://github.com/dopplix/QJsonObjectMutex.git
 ```
 
 - Add to Project
