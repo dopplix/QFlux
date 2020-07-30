@@ -20,6 +20,28 @@ git clone https://github.com/dopplix/QFlux.git qflux
 
 # Setting
 
+## ActionTypes
+
+- add ActionTypes Header File
+
+![addHeader](https://user-images.githubusercontent.com/31100072/88890280-5ca02c00-d27c-11ea-95db-64788fdf69c9.PNG)
+![addActionTypes](https://user-images.githubusercontent.com/31100072/88890403-8c4f3400-d27c-11ea-9816-0f08708f0157.PNG)
+
+- Define ActionTypes
+
+```cpp
+#ifndef ACTIONTYPES_H
+#define ACTIONTYPES_H
+
+#include <QString>
+
+namespace ActionTypes {
+    const QString DEFAULT_ACTION = "DEFAULT_ACTION";
+}
+
+#endif // ACTIONTYPES_H
+```
+
 ## Modify Plain Widget to ConnectedWidget
 
 1. Include ConnectedWidget
@@ -36,6 +58,7 @@ git clone https://github.com/dopplix/QFlux.git qflux
 
 #include <QWidget>
 #include "qflux/connectedwidget.h"
+#include "actionTypes.h"
 
 //class MainWidget : public QWidget{
 class MainWidget : public ConnectedWidget{
@@ -46,7 +69,7 @@ public:
     ~MainWidget();
 
 public slots:
-    void onStoreChanged(QJsonObject diffObj);
+    void onStoreChanged(QJsonObject diffObj) override;
     
 };
 #endif // MAINWIDGET_H
@@ -94,7 +117,7 @@ public:
     Dispatcher();
 
 public slots:
-    void dispatch(QString actionType, QJsonObject payload);
+    void dispatch(QString actionType, QJsonObject payload) override;
 
 };
 
@@ -113,5 +136,85 @@ void Dispatcher::dispatch(QString actionType, QJsonObject payload){
 }
 ```
 
+# Connect to Dispatcher
+
+- Global Dispatcher
+
+#### main.cpp
+```cpp
+#include <QApplication>
+#include "mainwidget.h"
+#include "dispatcher.h"
+
+Dispatcher* dispatcher;
+
+int main(int argc, char *argv[]){
+    dispatcher = new Dispatcher;
+    QApplication a(argc, argv);
+    MainWidget w;
+    dispatcher->connectWidget(&w);
+    w.show();
+    return a.exec();
+}
+```
+
+- Every ConnectedWidget Must Connect to dispatcher
+
+```cpp
+SomeWidget* sw = new SomeWidget; // Parent is ConnectedWidget
+dispatcher->connectWidget(sw);
+```
+
 # Usuage
 
+## Action : Widget -> Store
+
+- Create Action
+
+#### mainwidget.cpp
+```cpp
+QJsonObject payload;
+payload.insert("TEST_KEY","TEST_VALUE");
+emit(action(ActionTypes::DEFAULT_ACTION,payload));
+```    
+
+- Dispatch
+
+#### dispatcher.cpp
+```cpp
+void Dispatcher::dispatch(QString actionType, QJsonObject payload){
+    if(actionType==ActionTypes::DEFAULT_ACTION){
+        store.setObject(payload);
+    }else{
+        
+    }
+}
+```
+
+## Listen : Store -> Widget
+
+#### mainwidget.cpp
+```cpp
+void MainWidget::onStoreChanged(QJsonObject diffObj){
+    QString key = diffObj.keys().at(0);
+    QJsonValue value = diffObj.value(key);
+    if(key=="TEST_KEY"){
+        //Update Some Views
+    }else{
+        
+    }
+}
+```
+
+## Use Store : Get State In Widget
+
+#### mainwidget.cpp
+```cpp
+QJsonObject state = getState();
+```
+
+# Example
+
+- qflux-starter
+
+https://github.com/dopplix/qflux-starter
