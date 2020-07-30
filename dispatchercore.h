@@ -2,7 +2,7 @@
 #define DISPATCHERCORE_H
 
 #include <QThread>
-#include "qjsonobjectmutex.h"
+#include "store/qjsonobjectmutex.h"
 #include "connectedwidget.h"
 
 class DispatcherCore : public QObject{
