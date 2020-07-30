@@ -9,7 +9,7 @@ class ConnectedWidget : public QWidget{
     Q_OBJECT
 
 public:
-    explicit ConnectedWidget(QWidget *parent = nullptr);
+    explicit ConnectedWidget(QWidget *parent = nullptr) : QWidget(parent){}
     QJsonObject getState();
 
 signals:
