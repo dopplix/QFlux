@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QJsonObject>
-#include "qjsonobjectmutex.h"
 
 class ConnectedWidget : public QWidget{
     Q_OBJECT
