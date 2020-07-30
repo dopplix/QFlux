@@ -16,7 +16,7 @@ git clone https://github.com/dopplix/QFlux.git qflux
 - Add to Project
 
 ![openfile](https://user-images.githubusercontent.com/31100072/88888794-f0242d80-d279-11ea-8fe5-d401079ee237.png)
-![addfile](https://user-images.githubusercontent.com/31100072/88888802-f3b7b480-d279-11ea-92f4-db62c9eeafe0.PNG)
+![addfile](https://user-images.githubusercontent.com/31100072/88889065-72aced00-d27a-11ea-9bb2-f78f85c6097d.PNG)
 
 # Setting
 
