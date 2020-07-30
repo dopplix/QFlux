@@ -1,4 +1,4 @@
-# Make Project
+# Make New Project
 
 ![newapp](https://user-images.githubusercontent.com/31100072/88888672-bb17db00-d279-11ea-8906-fc43e07637fe.PNG)
 ![project](https://user-images.githubusercontent.com/31100072/88888683-be12cb80-d279-11ea-922e-ecfc72d0000b.PNG)
