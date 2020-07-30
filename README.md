@@ -12,7 +12,7 @@
 cd <qt-project-folder>
 git clone https://github.com/dopplix/QFlux.git qflux
 cd qflux
-git clone https://github.com/dopplix/QJsonObjectMutex.git
+git clone https://github.com/dopplix/QJsonObjectMutex.git store
 ```
 
 - Add to Project
