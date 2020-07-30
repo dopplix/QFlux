@@ -1,6 +1,6 @@
 # Install
 
-- In Qt Project Folder
+- Clone QFlux Module in Qt Project Folder
 
 ```
 cd <to-qt-project-folder>
