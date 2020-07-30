@@ -18,7 +18,8 @@ git clone https://github.com/dopplix/QJsonObjectMutex.git store
 - Add to Project
 
 ![openfile](https://user-images.githubusercontent.com/31100072/88888794-f0242d80-d279-11ea-8fe5-d401079ee237.png)
-![addfile](https://user-images.githubusercontent.com/31100072/88889065-72aced00-d27a-11ea-9bb2-f78f85c6097d.PNG)
+![addfile1](https://user-images.githubusercontent.com/31100072/88910285-389e1400-d297-11ea-808a-1b5caae927dc.PNG)
+![addfile2](https://user-images.githubusercontent.com/31100072/88910355-55d2e280-d297-11ea-92c1-a579354ea9f4.PNG)
 
 # Setting
 
