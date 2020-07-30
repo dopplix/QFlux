@@ -184,6 +184,7 @@ emit(action(ActionTypes::DEFAULT_ACTION,payload));
 ```cpp
 void Dispatcher::dispatch(QString actionType, QJsonObject payload){
     if(actionType==ActionTypes::DEFAULT_ACTION){
+        //Do Something
         store.setObject(payload);
     }else{
         
