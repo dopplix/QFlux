@@ -7,7 +7,13 @@ cd <to-qt-project-folder>
 git clone https://github.com/dopplix/QFlux.git qflux
 ```
 
-# Usage
+# Make Project
+
+![newapp](https://user-images.githubusercontent.com/31100072/88888672-bb17db00-d279-11ea-8906-fc43e07637fe.PNG)
+![project](https://user-images.githubusercontent.com/31100072/88888683-be12cb80-d279-11ea-922e-ecfc72d0000b.PNG)
+![MainWidget](https://user-images.githubusercontent.com/31100072/88888690-c1a65280-d279-11ea-9c5f-0e3814a49370.PNG)
+
+# Setting
 
 ## Modify Plain Widget to ConnectedWidget
 
@@ -95,4 +101,6 @@ void Dispatcher::dispatch(QString actionType, QJsonObject payload){
     
 }
 ```
+
+# Usuage
 
