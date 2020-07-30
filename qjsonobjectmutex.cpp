@@ -1,5 +1,4 @@
 #include "qjsonobjectmutex.h"
-#include <QDebug>
 
 QJsonObjectMutex::QJsonObjectMutex(QObject *parent) : QObject(parent), QJsonObject(){
 

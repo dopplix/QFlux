@@ -1,5 +1,4 @@
 #include "dispatchercore.h"
-#include <QDebug>
 
 DispatcherCore::DispatcherCore(QObject *parent) : QObject(parent){
     this->moveToThread(dispatcherThread);

@@ -1,5 +1,4 @@
 #include "connectedwidget.h"
-#include <QDebug>
 
 ConnectedWidget::ConnectedWidget(QWidget* parent): QWidget(parent){
 

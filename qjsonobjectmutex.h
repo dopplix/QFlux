@@ -1,5 +1,6 @@
 #ifndef MYOBJECT_H
 #define MYOBJECT_H
+
 #include <QObject>
 #include <QJsonObject>
 #include <QJsonArray>

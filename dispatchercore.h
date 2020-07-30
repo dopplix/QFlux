@@ -1,7 +1,6 @@
 #ifndef DISPATCHERCORE_H
 #define DISPATCHERCORE_H
 
-#include <QObject>
 #include <QThread>
 #include "qjsonobjectmutex.h"
 #include "connectedwidget.h"
