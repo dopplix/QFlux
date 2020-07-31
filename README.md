@@ -163,6 +163,15 @@ int main(int argc, char *argv[]){
 
 - Every ConnectedWidget Must Connect to dispatcher
 
+#### under includes
+```cpp
+...
+#include "dispatcher.h"
+
+extern Dispatcher* dispatcher;
+```
+
+#### use
 ```cpp
 SomeWidget* sw = new SomeWidget; // Parent is ConnectedWidget
 dispatcher->connectWidget(sw);
