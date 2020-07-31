@@ -151,9 +151,9 @@ void Dispatcher::dispatch(QString actionType, QJsonObject payload){
 
 Dispatcher* dispatcher;
 
-int main(int argc, char *argv[]){
-    dispatcher = new Dispatcher;
+int main(int argc, char *argv[]){    
     QApplication a(argc, argv);
+    dispatcher = new Dispatcher;
     MainWidget w;
     dispatcher->connectWidget(&w);
     w.show();
