@@ -115,7 +115,8 @@ void MainWidget::onStoreChanged(QJsonObject diffObj){
 #include "qflux/dispatchercore.h"
 
 class Dispatcher : public DispatcherCore{
-
+    Q_OBJECT
+    
 public:
     Dispatcher();
 
