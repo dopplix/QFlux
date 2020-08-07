@@ -178,7 +178,7 @@ SomeWidget* sw = new SomeWidget; // Parent is ConnectedWidget
 dispatcher->connectWidget(sw);
 ```
 
-# Usuage
+# Usage
 
 ## Action : Widget -> Store
 
